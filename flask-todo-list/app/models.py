@@ -1,7 +1,7 @@
 from app import db, marsh
 
 
-class Todo(db.Model):
+class TodoApp(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(120))
 
@@ -9,6 +9,6 @@ class Todo(db.Model):
         self.text = text
 
 
-class TodoSchema(marsh.Schema):
+class TodoAppSchema(marsh.Schema):
     class Metadata:
         field = ("id", "text")
